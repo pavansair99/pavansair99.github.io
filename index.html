@@ -117,7 +117,16 @@ section{scroll-margin-top:78px}
 .hero-name{font-family:'DM Sans',sans-serif;font-size:clamp(2.5rem,4.25vw,4.15rem);font-weight:800;line-height:1.02;letter-spacing:0;animation:si .85s var(--ease) .08s both}
 .hero-name span{color:var(--t1)}
 .hero-tagline{font-size:clamp(1.15rem,1.7vw,1.55rem);color:var(--t1);margin:18px 0 20px;font-weight:700;line-height:1.3;max-width:680px;animation:si .85s var(--ease) .16s both}
-.hero-desc{font-size:16px;color:var(--t2);line-height:1.75;max-width:680px;margin-bottom:32px;animation:si .85s var(--ease) .24s both}
+.hero-desc{
+  font-size:16px;
+  color:var(--t2);
+  line-height:1.75;
+  max-width:660px;
+  margin-bottom:32px;
+  text-align:left;
+  text-wrap:pretty;
+  animation:si .85s var(--ease) .24s both;
+}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center;animation:fa .85s var(--ease) .32s both}
 .btn-p{height:52px;padding:0 24px;border-radius:var(--r-pill);background:linear-gradient(135deg,#18bdf2,#2f8f83);color:#fff;font-weight:800;font-size:15px;box-shadow:0 16px 34px rgba(0,137,199,.28);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .2s,filter .2s,box-shadow .2s}
 .btn-p:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 20px 42px rgba(0,137,199,.34)}
@@ -171,6 +180,7 @@ section{scroll-margin-top:78px}
 /* ── ABOUT ── */
 #about{background:var(--bg1)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
 .about-p{color:var(--t2);font-size:15px;line-height:1.88;margin-bottom:14px}
 .about-p strong{color:var(--t1)}
 .about-note{background:var(--cyan-08);border:1px solid rgba(45,168,154,.22);border-left:3px solid var(--cyan);border-radius:8px;padding:14px 18px;margin-top:20px;font-size:14px;color:var(--t2);line-height:1.7}
@@ -193,6 +203,26 @@ section{scroll-margin-top:78px}
 /* ── PROJECTS ── */
 #projects{background:var(--bg0)}
 .projects-hdr,.arch-hdr{text-align:left;max-width:720px;margin:0 0 36px}
+.projects-hdr{
+  text-align:center;
+  margin:0 auto 36px;
+  max-width:820px;
+}
+
+.projects-hdr p{
+  margin-left:auto;
+  margin-right:auto;
+}
+.arch-hdr{
+  text-align:center;
+  margin:0 auto 36px;
+  max-width:820px;
+}
+
+.arch-hdr p{
+  margin-left:auto;
+  margin-right:auto;
+}
 .projects-hdr p,.arch-hdr p{color:var(--t2);margin-top:10px;font-size:15px;line-height:1.65;max-width:610px}
 .projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .project-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-card);padding:26px;backdrop-filter:blur(14px);position:relative;overflow:hidden;transition:border-color .3s,transform .25s,box-shadow .3s;display:flex;flex-direction:column}
@@ -226,7 +256,9 @@ section{scroll-margin-top:78px}
 .arch-stack-val{font-size:13px;color:var(--t1);font-weight:700;line-height:1.4}
 
 /* ── SKILLS ── */
-#skills{background:var(--bg0)}
+#skills{
+  background:var(--bg0);
+}
 .skills-hdr{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:36px;align-items:end;margin-bottom:42px}
 .skills-hdr p{color:var(--t2);margin-top:12px;font-size:15px;line-height:1.65;max-width:620px}
 .skills-snapshot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -255,12 +287,33 @@ section{scroll-margin-top:78px}
 .radar-row:last-child{margin-bottom:0}
 .radar-label{font-size:12px;color:var(--t2);font-weight:700}
 .radar-bar{height:8px;border-radius:20px;background:var(--bg2);overflow:hidden;border:1px solid var(--border)}
-.radar-fill{height:100%;border-radius:20px;background:var(--cyan)}
+
+
 
 /* ── EXPERIENCE TIMELINE ────────────────────────────────────── */
 #experience{background:var(--bg1)}
-.exp-hdr{text-align:center;max-width:600px;margin:0 auto 72px}
-.exp-hdr p{color:var(--t2);margin-top:10px;font-size:15px}
+.exp-hdr{
+  text-align:center;
+  max-width:820px;
+  margin:0 auto 72px;
+}
+
+.exp-hdr .sec-title{
+  font-size:clamp(2.6rem,4vw,3.15rem);
+  white-space:nowrap;
+}
+
+.exp-hdr p{
+  color:var(--t2);
+  margin-top:10px;
+  font-size:15px;
+}
+
+@media(max-width:760px){
+  .exp-hdr .sec-title{
+    white-space:normal;
+  }
+}
 
 .timeline{position:relative;max-width:960px;margin:0 auto}
 .timeline::before{
@@ -344,7 +397,14 @@ section{scroll-margin-top:78px}
 
 /* ── CERTIFICATIONS ── */
 #certs{background:var(--bg0)}
-.certs-hdr{text-align:center;margin-bottom:52px}
+#certs{
+  padding-top:48px;
+}
+
+.certs-hdr{
+  text-align:center;
+  margin-bottom:36px;
+}
 .certs-hdr p{color:var(--t2);margin-top:10px}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 .cert-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-card);padding:24px;backdrop-filter:blur(14px);display:flex;align-items:flex-start;gap:16px;transition:border-color .3s,transform .25s,box-shadow .3s;position:relative;overflow:hidden}
@@ -673,12 +733,12 @@ footer span{color:var(--cyan)}
         </p>
 
         <p class="hero-desc">
-          I design and ship production AI systems that connect LLMs, retrieval, agents, enterprise data pipelines, APIs, governance, and observability into reliable workflows for regulated business teams.
+          I I help regulated enterprises move from trusted data to production AI through retrieval, agents, LLMOps, audit-ready workflows, and human-in-the-loop governance.
         </p>
 
         <div class="hero-btns">
-          <a href="#projects" class="btn-p">View AI Platforms</a>
-          <a href="#architecture" class="btn-o">System Design</a>
+          <a href="#projects" class="btn-p">View Projects</a>
+          <a href="#architecture" class="btn-o">Platform Design</a>
           <a href="#experience" class="btn-o">Experience</a>
           <a href="https://github.com/PSR94" target="_blank" rel="noopener noreferrer" class="btn-o">GitHub</a>
         </div>
@@ -735,28 +795,29 @@ footer span{color:var(--cyan)}
       <div class="about-copy rev-l">
         <p class="sec-label">About Me</p>
 
-        <h2 class="sec-title" style="margin-bottom:20px">
-          From trusted data<br/>to production AI
-        </h2>
+        <h2 class="sec-title about-title" style="margin-bottom:20px">
+  From Governed Data to Production AI
+</h2>
+
+        
 
         <p class="about-p">
-          I build AI systems where reliability matters: regulated workflows, enterprise knowledge,
-          sensitive data, audit trails, and human review. My work connects data engineering,
-          retrieval, model orchestration, APIs, and governance into practical platforms that teams
-          can use every day.
-        </p>
+  I build enterprise Data + AI platforms for regulated teams, connecting Microsoft Fabric,
+  Azure, retrieval, agents, and governance into workflows that can be audited, monitored,
+  and trusted in production.
+</p>
 
         <p class="about-p">
-          I am strongest at taking an AI idea from prototype to production, including the data
-          foundation, grounding layer, agent workflow, evaluation process, monitoring, and release
-          controls needed for real business adoption.
-        </p>
+  My work spans financial services, healthcare, insurance, and retail, with hands-on delivery
+  across RAG systems, GenAI workflow automation, LLMOps, semantic search, data modernization,
+  and human-in-the-loop review.
+</p>
 
         <div class="about-note">
           <strong>My focus:</strong>
           <span>
-            Building AI that is useful, measurable, traceable, and safe enough for enterprise teams
-            to trust in high-stakes environments.
+            Turning trusted enterprise data into grounded, governed, and measurable AI systems
+    that support real business workflows in high-stakes environments.
           </span>
         </div>
 
@@ -861,29 +922,96 @@ footer span{color:var(--cyan)}
 <section id="architecture" class="section">
   <div class="container">
     <div class="arch-hdr rev">
-      <p class="sec-label">System Design</p>
-      <h2 class="sec-title">Platform Approach</h2>
-      <p>A practical delivery pattern for reliable retrieval, governed agents, measurable quality, and deployable service boundaries.</p>
+      <p class="sec-label">Platform Design</p>
+      <h2 class="sec-title">Enterprise AI Architecture</h2>
+      <p>
+        A production delivery pattern for governed Data + AI platforms, connecting trusted data,
+        retrieval, agents, evaluation, human review, and audit-ready operations.
+      </p>
     </div>
+
     <div class="arch-grid">
       <div class="arch-card rev-l">
-        <h3 class="arch-title">Platform Flow</h3>
+        <h3 class="arch-title">Delivery Flow</h3>
+
         <div class="arch-flow">
-          <div class="arch-step"><div class="arch-step-num">1</div><div class="arch-step-text">Ingest documents, events, prompts, traces, and operational metadata.</div></div>
-          <div class="arch-step"><div class="arch-step-num">2</div><div class="arch-step-text">Plan retrieval or agent workflows with explicit routing and access boundaries.</div></div>
-          <div class="arch-step"><div class="arch-step-num">3</div><div class="arch-step-text">Run hybrid retrieval, tool calls, eval suites, or analytics execution through typed APIs.</div></div>
-          <div class="arch-step"><div class="arch-step-num">4</div><div class="arch-step-text">Apply guardrails, approvals, risk scoring, citations, and audit logging before output.</div></div>
+          <div class="arch-step">
+            <div class="arch-step-num">1</div>
+            <div class="arch-step-text">
+              Build trusted data foundations with Microsoft Fabric, OneLake, Delta Lake,
+              lineage, access controls, and reusable data products.
+            </div>
+          </div>
+
+          <div class="arch-step">
+            <div class="arch-step-num">2</div>
+            <div class="arch-step-text">
+              Convert enterprise documents and data into AI-ready knowledge using metadata,
+              chunking, embeddings, hybrid search, and source attribution.
+            </div>
+          </div>
+
+          <div class="arch-step">
+            <div class="arch-step-num">3</div>
+            <div class="arch-step-text">
+              Orchestrate RAG, Agentic RAG, and multi-agent workflows with typed APIs,
+              controlled tools, routing logic, and human-review checkpoints.
+            </div>
+          </div>
+
+          <div class="arch-step">
+            <div class="arch-step-num">4</div>
+            <div class="arch-step-text">
+              Operationalize with evaluation gates, prompt/version control, telemetry,
+              security boundaries, approval workflows, and audit logs.
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="arch-card rev-r">
-        <h3 class="arch-title">Reusable Stack</h3>
+        <h3 class="arch-title">Enterprise Stack</h3>
+
         <div class="arch-stack">
-          <div class="arch-stack-item"><div class="arch-stack-label">Control Surface</div><div class="arch-stack-val">Next.js, TypeScript, shadcn-style UI</div></div>
-          <div class="arch-stack-item"><div class="arch-stack-label">API Layer</div><div class="arch-stack-val">FastAPI, Pydantic, typed service contracts</div></div>
-          <div class="arch-stack-item"><div class="arch-stack-label">Retrieval</div><div class="arch-stack-val">Vector, BM25, graph expansion, rerankers</div></div>
-          <div class="arch-stack-item"><div class="arch-stack-label">Governance</div><div class="arch-stack-val">Policies, approvals, red-team evals, CI gates</div></div>
-          <div class="arch-stack-item"><div class="arch-stack-label">Persistence</div><div class="arch-stack-val">PostgreSQL, Redis, Qdrant, Neo4j, OpenSearch</div></div>
-          <div class="arch-stack-item"><div class="arch-stack-label">Delivery</div><div class="arch-stack-val">Docker Compose, local-first dev, cloud-ready APIs</div></div>
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">Data Foundation</div>
+            <div class="arch-stack-val">Microsoft Fabric, OneLake, Delta Lake, PySpark</div>
+          </div>
+
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">AI Orchestration</div>
+            <div class="arch-stack-val">Azure OpenAI, Claude, LangGraph, LangChain</div>
+          </div>
+
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">Retrieval</div>
+            <div class="arch-stack-val">Azure AI Search, Pinecone, FAISS, Neo4j</div>
+          </div>
+
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">Governance</div>
+            <div class="arch-stack-val">Purview, Entra ID, RBAC, Key Vault</div>
+          </div>
+
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">Application Layer</div>
+            <div class="arch-stack-val">ReactJS, FastAPI, .NET Core, Azure Functions</div>
+          </div>
+
+          <div class="arch-stack-item">
+            <div class="arch-stack-label">Operations</div>
+            <div class="arch-stack-val">Azure Monitor, App Insights, AKS, Docker, CI/CD</div>
+          </div>
+
+          <div class="arch-stack-item">
+  <div class="arch-stack-label">LLMOps & Evaluation</div>
+  <div class="arch-stack-val">RAGAS, LangSmith, Langfuse, golden datasets</div>
+</div>
+
+<div class="arch-stack-item">
+  <div class="arch-stack-label">Model Serving</div>
+  <div class="arch-stack-val">Triton, MLflow, Prometheus, Grafana</div>
+</div>
         </div>
       </div>
     </div>
@@ -1046,80 +1174,131 @@ footer span{color:var(--cyan)}
 <section id="skills" class="section">
   <div class="container">
     <div class="skills-hdr rev">
-      <div>
-        <h2 class="sec-title">Core Skills</h2>
-        <p>Focused on production AI systems: models, retrieval, agents, data pipelines, APIs, and governance.</p>
-      </div>
-      <div class="skills-snapshot">
-        <div class="skill-stat"><div class="skill-stat-num">10+</div><div class="skill-stat-label">Years delivery</div></div>
-        <div class="skill-stat"><div class="skill-stat-num">5</div><div class="skill-stat-label">AI platform domains</div></div>
-        <div class="skill-stat"><div class="skill-stat-num">Cloud</div><div class="skill-stat-label">Azure, AWS, GCP</div></div>
-      </div>
+  <div>
+    <h2 class="sec-title">Core Skills</h2>
+    <p>
+      Focused on governed Data + AI platforms: GenAI, Agentic RAG, Microsoft Fabric,
+      retrieval, LLMOps, cloud delivery, APIs, and enterprise governance.
+    </p>
+  </div>
+
+  <div class="skills-snapshot">
+    <div class="skill-stat">
+      <div class="skill-stat-num">10+</div>
+      <div class="skill-stat-label">Years delivery</div>
     </div>
+
+    <div class="skill-stat">
+      <div class="skill-stat-num">14</div>
+      <div class="skill-stat-label">Regulated domains</div>
+    </div>
+
+    <div class="skill-stat">
+      <div class="skill-stat-num">3</div>
+      <div class="skill-stat-label">Cloud platforms</div>
+    </div>
+  </div>
+</div>
 
     <div class="skills-board">
       <div class="skill-panel rev-l">
         <div class="capability-list">
-          <article class="capability">
-            <div class="capability-mark">01</div>
-            <div>
-              <h3 class="capability-title">Generative AI Systems</h3>
-              <p class="capability-desc">Designing LLM applications with prompt strategy, routing, evaluations, guardrails, observability, and production release discipline.</p>
-              <div class="capability-tags"><span>Azure OpenAI</span><span>OpenAI</span><span>Anthropic</span><span>Llama</span><span>Gemini</span></div>
-            </div>
-          </article>
+  <article class="capability">
+    <div class="capability-mark">01</div>
+    <div>
+      <h3 class="capability-title">Generative AI & LLM Systems</h3>
+      <p class="capability-desc">
+        Designing production LLM applications with prompt strategy, structured outputs,
+        guardrails, evaluation gates, observability, and release controls.
+      </p>
+      <div class="capability-tags">
+        <span>Azure OpenAI</span><span>Claude</span><span>GPT-4o</span><span>Llama</span><span>Gemini</span>
+      </div>
+    </div>
+  </article>
 
-          <article class="capability">
-            <div class="capability-mark">02</div>
-            <div>
-              <h3 class="capability-title">Agentic Workflows</h3>
-              <p class="capability-desc">Building multi-step assistants with tool use, stateful execution, approval gates, human review, traceability, and failure handling.</p>
-              <div class="capability-tags"><span>LangGraph</span><span>LangChain</span><span>AutoGen</span><span>CrewAI</span><span>Semantic Kernel</span></div>
-            </div>
-          </article>
+  <article class="capability">
+    <div class="capability-mark">02</div>
+    <div>
+      <h3 class="capability-title">Agentic Workflows</h3>
+      <p class="capability-desc">
+        Building multi-step assistants with tool use, stateful execution, approval gates,
+        human review, traceability, and failure handling.
+      </p>
+      <div class="capability-tags">
+        <span>LangGraph</span><span>LangChain</span><span>Semantic Kernel</span><span>MCP</span><span>Azure AI Agent Service</span>
+      </div>
+    </div>
+  </article>
 
-          <article class="capability">
-            <div class="capability-mark">03</div>
-            <div>
-              <h3 class="capability-title">Retrieval &amp; Knowledge Platforms</h3>
-              <p class="capability-desc">Creating evidence-first RAG systems with hybrid search, graph expansion, reranking, citation quality checks, and feedback loops.</p>
-              <div class="capability-tags"><span>GraphRAG</span><span>Qdrant</span><span>Pinecone</span><span>Neo4j</span><span>OpenSearch</span><span>pgvector</span></div>
-            </div>
-          </article>
+  <article class="capability">
+    <div class="capability-mark">03</div>
+    <div>
+      <h3 class="capability-title">RAG & Knowledge Retrieval</h3>
+      <p class="capability-desc">
+        Creating evidence-first RAG systems with hybrid search, metadata filtering,
+        graph expansion, reranking, citations, and grounded response controls.
+      </p>
+      <div class="capability-tags">
+        <span>Azure AI Search</span><span>Pinecone</span><span>FAISS</span><span>Neo4j</span><span>GraphRAG</span>
+      </div>
+    </div>
+  </article>
 
-          <article class="capability">
-            <div class="capability-mark">04</div>
-            <div>
-              <h3 class="capability-title">MLOps, Data &amp; Delivery</h3>
-              <p class="capability-desc">Taking models from experimentation into governed services with pipelines, feature flows, monitoring, CI/CD, and cloud infrastructure.</p>
-              <div class="capability-tags"><span>Databricks</span><span>MLflow</span><span>PySpark</span><span>Kafka</span><span>Docker</span><span>Kubernetes</span></div>
-            </div>
-          </article>
-        </div>
+  <article class="capability">
+    <div class="capability-mark">04</div>
+    <div>
+      <h3 class="capability-title">Microsoft Fabric & Data Engineering</h3>
+      <p class="capability-desc">
+        Building AI-ready data foundations with Fabric Lakehouse, OneLake, Delta tables,
+        PySpark, medallion architecture, data quality, and governed analytics.
+      </p>
+      <div class="capability-tags">
+        <span>Microsoft Fabric</span><span>OneLake</span><span>PySpark</span><span>Delta Lake</span><span>Power BI</span>
+      </div>
+    </div>
+  </article>
+</div>
       </div>
 
       <aside class="skill-panel rev-r">
         <h3 class="skill-panel-title">Execution Stack</h3>
-        <p class="skill-panel-copy">The tools change by problem, but the operating model stays consistent: typed services, measurable quality, clear ownership, and deployment-ready boundaries.</p>
+<p class="skill-panel-copy">
+  A practical stack for building production AI systems with trusted data foundations,
+  typed APIs, measurable quality, governed access, and deployment-ready operations.
+</p>
 
-        <div class="stack-groups">
-          <div class="stack-group">
-            <div class="stack-label">Languages &amp; APIs</div>
-            <div class="tool-cloud"><span>Python</span><span>TypeScript</span><span>C# .NET</span><span>Java</span><span>FastAPI</span><span>GraphQL</span></div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-label">Data &amp; ML</div>
-            <div class="tool-cloud"><span>Snowflake</span><span>Databricks</span><span>Spark</span><span>Airflow</span><span>dbt</span><span>MLflow</span></div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-label">Cloud &amp; Platform</div>
-            <div class="tool-cloud"><span>Azure</span><span>AWS</span><span>GCP</span><span>AKS</span><span>Terraform</span><span>GitHub Actions</span></div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-label">Governance</div>
-            <div class="tool-cloud"><span>Model Risk</span><span>HIPAA</span><span>Audit Logs</span><span>PII Controls</span><span>LLMOps</span><span>WCAG</span></div>
-          </div>
-        </div>
+<div class="stack-groups">
+  <div class="stack-group">
+    <div class="stack-label">Languages & APIs</div>
+    <div class="tool-cloud">
+      <span>Python</span><span>TypeScript</span><span>C# .NET</span><span>Java</span><span>FastAPI</span><span>REST APIs</span>
+    </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-label">Data Platform</div>
+    <div class="tool-cloud">
+      <span>Microsoft Fabric</span><span>Azure Synapse</span><span>ADF</span><span>Databricks</span><span>Snowflake</span><span>Power BI</span>
+    </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-label">LLMOps & Evaluation</div>
+    <div class="tool-cloud">
+      <span>RAGAS</span><span>LangSmith</span><span>Langfuse</span><span>Golden Datasets</span><span>Prompt Regression</span>
+    </div>
+  </div>
+
+  
+
+  <div class="stack-group">
+    <div class="stack-label">Cloud & Governance</div>
+    <div class="tool-cloud">
+      <span>Azure</span><span>AWS</span><span>GCP</span><span>Purview</span><span>Entra ID</span><span>Key Vault</span>
+    </div>
+  </div>
+</div>
 
         <div class="skill-radar">
           <div class="radar-row"><div class="radar-label">AI Architecture</div><div class="radar-bar"><div class="radar-fill" style="width:96%"></div></div></div>
@@ -1258,11 +1437,14 @@ footer span{color:var(--cyan)}
 <section id="contact">
   <div class="container">
     <div class="contact-header rev">
-      <p class="sec-label" style="text-align:center">Get In Touch</p>
-      <h2 class="sec-title" style="text-align:center">Let’s Talk About<br/>Production AI</h2>
+  <p class="sec-label" style="text-align:center">Get In Touch</p>
+  <h2 class="sec-title contact-title" style="text-align:center">Let’s Talk Data, AI & GenAI</h2>
 
-      <div class="contact-availability" style="margin-top:22px"><span class="contact-avail-dot"></span>Currently open to Senior AI/ML opportunities</div>
-    </div>
+  <div class="contact-availability" style="margin-top:22px">
+    <span class="contact-avail-dot"></span>
+    Open to Senior Data & AI / GenAI Engineering roles
+  </div>
+</div>
 
 
     <div class="contact-layout rev">
