@@ -287,6 +287,11 @@ section{scroll-margin-top:78px}
 .radar-row:last-child{margin-bottom:0}
 .radar-label{font-size:12px;color:var(--t2);font-weight:700}
 .radar-bar{height:8px;border-radius:20px;background:var(--bg2);overflow:hidden;border:1px solid var(--border)}
+.radar-fill{
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#2da89a,#18bdf2);
+}
 
 
 
@@ -1301,11 +1306,34 @@ footer span{color:var(--cyan)}
 </div>
 
         <div class="skill-radar">
-          <div class="radar-row"><div class="radar-label">AI Architecture</div><div class="radar-bar"><div class="radar-fill" style="width:96%"></div></div></div>
-          <div class="radar-row"><div class="radar-label">MLOps</div><div class="radar-bar"><div class="radar-fill" style="width:92%"></div></div></div>
-          <div class="radar-row"><div class="radar-label">Cloud Delivery</div><div class="radar-bar"><div class="radar-fill" style="width:90%"></div></div></div>
-          <div class="radar-row"><div class="radar-label">Full Stack</div><div class="radar-bar"><div class="radar-fill" style="width:86%"></div></div></div>
-        </div>
+  <div class="radar-row">
+    <div class="radar-label">GenAI Platforms</div>
+    <div class="radar-bar">
+      <div class="radar-fill" style="width:96%"></div>
+    </div>
+  </div>
+
+  <div class="radar-row">
+    <div class="radar-label">RAG & Agents</div>
+    <div class="radar-bar">
+      <div class="radar-fill" style="width:94%"></div>
+    </div>
+  </div>
+
+  <div class="radar-row">
+    <div class="radar-label">Fabric & Azure</div>
+    <div class="radar-bar">
+      <div class="radar-fill" style="width:90%"></div>
+    </div>
+  </div>
+
+  <div class="radar-row">
+    <div class="radar-label">Governance</div>
+    <div class="radar-bar">
+      <div class="radar-fill" style="width:86%"></div>
+    </div>
+  </div>
+</div>
       </aside>
     </div>
   </div>
