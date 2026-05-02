@@ -463,12 +463,37 @@ footer span{color:var(--cyan)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .tl-item{grid-template-columns:1fr!important;gap:0!important}
-  .tl-dot-col{display:none}
-  .tl-meta{text-align:left!important;padding:0 0 16px 0!important;grid-column:1!important;grid-row:auto!important}
-  .tl-card-col{padding:0!important;grid-column:1!important;grid-row:auto!important}
-  .tl-item:nth-child(even) .tl-meta{grid-column:1!important;grid-row:auto!important}
-  .tl-item:nth-child(even) .tl-card-col{grid-column:1!important;grid-row:auto!important}
+  .tl-item{
+  display:flex!important;
+  flex-direction:column;
+  gap:0!important;
+}
+
+.tl-dot-col{
+  display:none;
+}
+
+.tl-meta{
+  order:1;
+  text-align:left!important;
+  padding:0 0 16px 0!important;
+}
+
+.tl-card-col{
+  order:2;
+  padding:0!important;
+}
+
+.tl-item:nth-child(even) .tl-meta{
+  order:1;
+  text-align:left!important;
+  padding:0 0 16px 0!important;
+}
+
+.tl-item:nth-child(even) .tl-card-col{
+  order:2;
+  padding:0!important;
+}
   .timeline::before{display:none}
   .tl-company-logo{display:block!important;float:none!important;margin-bottom:12px!important}
   /* Mobile timeline: left accent line */
@@ -499,10 +524,43 @@ footer span{color:var(--cyan)}
   .section{padding:60px 0}
   #contact{padding:60px 0}
   .nav-gh{display:none}
-  .hero-stats{gap:14px}
-  /* Remove dividers when stats wrap */
-  .h-stat-div{display:none}
-  .h-stat-val{font-size:1.6rem}
+  .hero-stats{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin-top:34px;
+  width:100%;
+}
+
+/* Remove dividers when stats become mobile cards */
+.h-stat-div{
+  display:none;
+}
+
+.h-stat{
+  text-align:left;
+  padding:14px 12px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+  backdrop-filter:blur(12px);
+}
+
+[data-theme="light"] .h-stat{
+  background:rgba(255,255,255,.65);
+}
+
+.h-stat-val{
+  font-size:1.65rem;
+}
+
+.h-stat-lbl{
+  font-size:10.5px;
+  line-height:1.3;
+  margin-top:5px;
+}
+
+  
   .hero-name{font-size:clamp(2.35rem,11vw,3.35rem)}
   .hero-tagline{font-size:clamp(1.1rem,5vw,1.4rem)}
   .hero-desc{font-size:15px;max-width:100%}
